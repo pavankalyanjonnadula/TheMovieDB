@@ -7,19 +7,6 @@
 //
 
 import UIKit
-//@IBDesignable extension UINavigationController {
-//    @IBInspectable var barTintColor: UIColor? {
-//        set {
-//            guard let uiColor = newValue else { return }
-//            navigationBar.barTintColor = uiColor
-//        }
-//        get {
-//            guard let color = navigationBar.barTintColor else { return nil }
-//            return color
-//        }
-//    }
-//}
-
 
 extension UIImageView {
    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {

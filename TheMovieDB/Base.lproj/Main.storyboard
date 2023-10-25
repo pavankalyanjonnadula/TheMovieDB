@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="140" estimatedRowHeight="140" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fu3-OB-Ott">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="140" estimatedRowHeight="140" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fu3-OB-Ott">
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                             </tableView>
                         </subviews>
@@ -38,6 +38,63 @@
             </objects>
             <point key="canvasLocation" x="3753.4351145038167" y="-2.1126760563380285"/>
         </scene>
+        <!--Movie Details-->
+        <scene sceneID="Bb1-1s-lDv">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailsViewController" id="seb-sM-Xo3" customClass="MovieDetailsViewController" customModule="TheMovieDB" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nHC-65-soz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="klz-fL-9p5">
+                                <rect key="frame" x="0.0" y="102.99999999999997" width="393" height="383.33333333333326"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSs-J5-e1m">
+                                <rect key="frame" x="20" y="496.33333333333331" width="353" height="29.999999999999943"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Jg8-An-nXr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HpR-Vm-KfR">
+                                <rect key="frame" x="20" y="536.33333333333337" width="353" height="271.66666666666663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Yxs-tf-Dnj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lSs-J5-e1m" firstAttribute="top" secondItem="klz-fL-9p5" secondAttribute="bottom" constant="10" id="5uP-85-vje"/>
+                            <constraint firstItem="HpR-Vm-KfR" firstAttribute="leading" secondItem="Yxs-tf-Dnj" secondAttribute="leading" constant="20" id="7zR-md-dxb"/>
+                            <constraint firstItem="klz-fL-9p5" firstAttribute="height" secondItem="nHC-65-soz" secondAttribute="height" multiplier="0.45" id="88A-hC-Pac"/>
+                            <constraint firstItem="Yxs-tf-Dnj" firstAttribute="bottom" secondItem="HpR-Vm-KfR" secondAttribute="bottom" constant="10" id="HF4-DM-M0g"/>
+                            <constraint firstItem="Yxs-tf-Dnj" firstAttribute="trailing" secondItem="klz-fL-9p5" secondAttribute="trailing" id="LFG-1N-2CS"/>
+                            <constraint firstItem="Yxs-tf-Dnj" firstAttribute="trailing" secondItem="lSs-J5-e1m" secondAttribute="trailing" constant="20" id="PVM-zc-O0S"/>
+                            <constraint firstItem="klz-fL-9p5" firstAttribute="leading" secondItem="Yxs-tf-Dnj" secondAttribute="leading" id="QPI-lj-9De"/>
+                            <constraint firstItem="lSs-J5-e1m" firstAttribute="leading" secondItem="Yxs-tf-Dnj" secondAttribute="leading" constant="20" id="Ztz-BP-Qtt"/>
+                            <constraint firstItem="Yxs-tf-Dnj" firstAttribute="trailing" secondItem="HpR-Vm-KfR" secondAttribute="trailing" constant="20" id="eNk-dm-qYt"/>
+                            <constraint firstItem="klz-fL-9p5" firstAttribute="top" secondItem="Yxs-tf-Dnj" secondAttribute="top" id="fwK-4B-6h8"/>
+                            <constraint firstItem="HpR-Vm-KfR" firstAttribute="top" secondItem="lSs-J5-e1m" secondAttribute="bottom" constant="10" id="wN1-Wc-Hwh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Movie Details" id="IR5-RO-BzM"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="movieImage" destination="klz-fL-9p5" id="aRN-A3-kIb"/>
+                        <outlet property="movieOverView" destination="HpR-Vm-KfR" id="ksc-3N-5Wd"/>
+                        <outlet property="movieTitle" destination="lSs-J5-e1m" id="lvf-yY-Ejl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="al4-HP-MsR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5332" y="-119"/>
+        </scene>
         <!--Top Rated Movies-->
         <scene sceneID="3VO-vX-N5g">
             <objects>
@@ -46,7 +103,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="140" estimatedRowHeight="140" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="01f-6C-Gbe">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="140" estimatedRowHeight="140" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="01f-6C-Gbe">
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                             </tableView>
                         </subviews>
@@ -130,11 +187,14 @@
     <resources>
         <image name="movieclapper" catalog="system" width="128" height="113"/>
         <image name="star" catalog="system" width="128" height="116"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
