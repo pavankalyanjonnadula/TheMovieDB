@@ -4,6 +4,10 @@ Assignment Task -- 2-Nov-2023
 Apply MVVM architecture pattern.
 
 
+App Architecture
+Apply MVVM architecture pattern.
+
+Details
 Overviews
 
 Apply MVVM architecture pattern with Protocol Oriented Programming(POP)
@@ -40,6 +44,3 @@ In “given” part we should put object definitions, mocks definitions, whole i
 In “when” part we are putting action/behavior that we want to test.
 “Then” section is dedicated for verification part. Here we should put our assertions.
 Code Coverage
-
-
-The App will supports both dark and light modes
